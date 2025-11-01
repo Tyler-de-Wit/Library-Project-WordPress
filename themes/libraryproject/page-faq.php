@@ -28,7 +28,7 @@
             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                 <div class="accordion-body">
                     <p>Fusce porta et arcu at lobortis. Fusce pulvinar magna ipsum, ut finibus urna scelerisque mattis. Sed ut felis lacus. Cras euismod lacinia quam ultrices pulvinar. Curabitur sit amet feugiat lectus. Sed et dignissim ligula, a hendrerit odio. Cras nec odio erat. Mauris gravida diam eget orci semper, vel dapibus ante feugiat. Ut convallis sapien nec fringilla gravida. Maecenas id dapibus libero. Ut id diam ut libero venenatis dignissim. Phasellus sed justo tincidunt, lobortis nisl vel, finibus neque. Etiam eget sapien eget augue dictum auctor in vel nunc. Ut leo lorem, commodo ac mi in, sodales malesuada turpis. Vivamus feugiat congue magna.</p>
-                    <p>Visit our <a href="microsoft-setup.html">Microsoft Setup</a> page to learn more.</p>
+                    <p>Visit our <a href="<?php echo site_url().'/microsoft-setup'; ?>">Microsoft Setup</a> page to learn more.</p>
                 </div>
             </div>
         </div>
@@ -42,7 +42,7 @@
             <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                 <div class="accordion-body">
                     <p>Fusce porta et arcu at lobortis. Fusce pulvinar magna ipsum, ut finibus urna scelerisque mattis. Sed ut felis lacus. Cras euismod lacinia quam ultrices pulvinar. Curabitur sit amet feugiat lectus. Sed et dignissim ligula, a hendrerit odio. Cras nec odio erat. Mauris gravida diam eget orci semper, vel dapibus ante feugiat. Ut convallis sapien nec fringilla gravida. Maecenas id dapibus libero. Ut id diam ut libero venenatis dignissim. Phasellus sed justo tincidunt, lobortis nisl vel, finibus neque. Etiam eget sapien eget augue dictum auctor in vel nunc. Ut leo lorem, commodo ac mi in, sodales malesuada turpis. Vivamus feugiat congue magna.</p>
-                    <p>Visit our <a href="login-to-wifi.html">Login To Campus WIFI</a> page to learn more.</p>
+                    <p>Visit our <a href="<?php echo site_url().'/login-to-wifi'; ?>">Login To Campus WIFI</a> page to learn more.</p>
                 </div>
             </div>
         </div>
@@ -56,7 +56,7 @@
             <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
                 <div class="accordion-body">
                     <p>Fusce porta et arcu at lobortis. Fusce pulvinar magna ipsum, ut finibus urna scelerisque mattis. Sed ut felis lacus. Cras euismod lacinia quam ultrices pulvinar. Curabitur sit amet feugiat lectus. Sed et dignissim ligula, a hendrerit odio. Cras nec odio erat. Mauris gravida diam eget orci semper, vel dapibus ante feugiat. Ut convallis sapien nec fringilla gravida. Maecenas id dapibus libero. Ut id diam ut libero venenatis dignissim. Phasellus sed justo tincidunt, lobortis nisl vel, finibus neque. Etiam eget sapien eget augue dictum auctor in vel nunc. Ut leo lorem, commodo ac mi in, sodales malesuada turpis. Vivamus feugiat congue magna.</p>
-                    <p>Visit our <a href="locating-timetable.html">Locating Your Timetable</a> page to learn more.</p>
+                    <p>Visit our <a href="<?php echo site_url().'/locating-timetable'; ?>">Locating Your Timetable</a> page to learn more.</p>
                 </div>
             </div>
         </div>
@@ -75,7 +75,7 @@
             <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
                 <div class="accordion-body">
                     <p>Fusce porta et arcu at lobortis. Fusce pulvinar magna ipsum, ut finibus urna scelerisque mattis. Sed ut felis lacus. Cras euismod lacinia quam ultrices pulvinar. Curabitur sit amet feugiat lectus. Sed et dignissim ligula, a hendrerit odio. Cras nec odio erat. Mauris gravida diam eget orci semper, vel dapibus ante feugiat. Ut convallis sapien nec fringilla gravida. Maecenas id dapibus libero. Ut id diam ut libero venenatis dignissim. Phasellus sed justo tincidunt, lobortis nisl vel, finibus neque. Etiam eget sapien eget augue dictum auctor in vel nunc. Ut leo lorem, commodo ac mi in, sodales malesuada turpis. Vivamus feugiat congue magna.</p>
-                    <p>Visit our <a href="microsoft-setup.html">Microsoft Setup</a> page to learn more.</p>
+                    <p>Visit our <a href="<?php echo site_url().'/microsoft-setup'; ?>">Microsoft Setup</a> page to learn more.</p>
                 </div>
             </div>
         </div>
@@ -89,7 +89,7 @@
             <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
                 <div class="accordion-body">
                     <p>Fusce porta et arcu at lobortis. Fusce pulvinar magna ipsum, ut finibus urna scelerisque mattis. Sed ut felis lacus. Cras euismod lacinia quam ultrices pulvinar. Curabitur sit amet feugiat lectus. Sed et dignissim ligula, a hendrerit odio. Cras nec odio erat. Mauris gravida diam eget orci semper, vel dapibus ante feugiat. Ut convallis sapien nec fringilla gravida. Maecenas id dapibus libero. Ut id diam ut libero venenatis dignissim. Phasellus sed justo tincidunt, lobortis nisl vel, finibus neque. Etiam eget sapien eget augue dictum auctor in vel nunc. Ut leo lorem, commodo ac mi in, sodales malesuada turpis. Vivamus feugiat congue magna.</p>
-                    <p>Visit our <a href="login-to-wifi.html">Login To Campus WIFI</a> page to learn more.</p>
+                    <p>Visit our <a href="<?php echo site_url().'/login-to-wifi'; ?>">Login To Campus WIFI</a> page to learn more.</p>
                 </div>
             </div>
         </div>
@@ -103,7 +103,7 @@
             <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
                 <div class="accordion-body">
                     <p>Fusce porta et arcu at lobortis. Fusce pulvinar magna ipsum, ut finibus urna scelerisque mattis. Sed ut felis lacus. Cras euismod lacinia quam ultrices pulvinar. Curabitur sit amet feugiat lectus. Sed et dignissim ligula, a hendrerit odio. Cras nec odio erat. Mauris gravida diam eget orci semper, vel dapibus ante feugiat. Ut convallis sapien nec fringilla gravida. Maecenas id dapibus libero. Ut id diam ut libero venenatis dignissim. Phasellus sed justo tincidunt, lobortis nisl vel, finibus neque. Etiam eget sapien eget augue dictum auctor in vel nunc. Ut leo lorem, commodo ac mi in, sodales malesuada turpis. Vivamus feugiat congue magna.</p>
-                    <p>Visit our <a href="locating-timetable.html">Locating Your Timetable</a> page to learn more.</p>
+                    <p>Visit our <a href="<?php echo site_url().'/locating-timetable'; ?>">Locating Your Timetable</a> page to learn more.</p>
                 </div>
             </div>
         </div>
@@ -122,7 +122,7 @@
             <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse">
                 <div class="accordion-body">
                     <p>Fusce porta et arcu at lobortis. Fusce pulvinar magna ipsum, ut finibus urna scelerisque mattis. Sed ut felis lacus. Cras euismod lacinia quam ultrices pulvinar. Curabitur sit amet feugiat lectus. Sed et dignissim ligula, a hendrerit odio. Cras nec odio erat. Mauris gravida diam eget orci semper, vel dapibus ante feugiat. Ut convallis sapien nec fringilla gravida. Maecenas id dapibus libero. Ut id diam ut libero venenatis dignissim. Phasellus sed justo tincidunt, lobortis nisl vel, finibus neque. Etiam eget sapien eget augue dictum auctor in vel nunc. Ut leo lorem, commodo ac mi in, sodales malesuada turpis. Vivamus feugiat congue magna.</p>
-                    <p>Visit our <a href="microsoft-setup.html">Microsoft Setup</a> page to learn more.</p>
+                    <p>Visit our <a href="<?php echo site_url().'/microsoft-setup'; ?>">Microsoft Setup</a> page to learn more.</p>
                 </div>
             </div>
         </div>
@@ -136,7 +136,7 @@
             <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse">
                 <div class="accordion-body">
                     <p>Fusce porta et arcu at lobortis. Fusce pulvinar magna ipsum, ut finibus urna scelerisque mattis. Sed ut felis lacus. Cras euismod lacinia quam ultrices pulvinar. Curabitur sit amet feugiat lectus. Sed et dignissim ligula, a hendrerit odio. Cras nec odio erat. Mauris gravida diam eget orci semper, vel dapibus ante feugiat. Ut convallis sapien nec fringilla gravida. Maecenas id dapibus libero. Ut id diam ut libero venenatis dignissim. Phasellus sed justo tincidunt, lobortis nisl vel, finibus neque. Etiam eget sapien eget augue dictum auctor in vel nunc. Ut leo lorem, commodo ac mi in, sodales malesuada turpis. Vivamus feugiat congue magna.</p>
-                    <p>Visit our <a href="login-to-wifi.html">Login To Campus WIFI</a> page to learn more.</p>
+                    <p>Visit our <a href="<?php echo site_url().'/login-to-wifi'; ?>">Login To Campus WIFI</a> page to learn more.</p>
                 </div>
             </div>
         </div>
@@ -150,7 +150,7 @@
             <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse">
                 <div class="accordion-body">
                     <p>Fusce porta et arcu at lobortis. Fusce pulvinar magna ipsum, ut finibus urna scelerisque mattis. Sed ut felis lacus. Cras euismod lacinia quam ultrices pulvinar. Curabitur sit amet feugiat lectus. Sed et dignissim ligula, a hendrerit odio. Cras nec odio erat. Mauris gravida diam eget orci semper, vel dapibus ante feugiat. Ut convallis sapien nec fringilla gravida. Maecenas id dapibus libero. Ut id diam ut libero venenatis dignissim. Phasellus sed justo tincidunt, lobortis nisl vel, finibus neque. Etiam eget sapien eget augue dictum auctor in vel nunc. Ut leo lorem, commodo ac mi in, sodales malesuada turpis. Vivamus feugiat congue magna.</p>
-                    <p>Visit our <a href="locating-timetable.html">Locating Your Timetable</a> page to learn more.</p>
+                    <p>Visit our <a href="<?php echo site_url().'/locating-timetable'; ?>">Locating Your Timetable</a> page to learn more.</p>
                 </div>
             </div>
         </div>

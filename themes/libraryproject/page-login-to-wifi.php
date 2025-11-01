@@ -16,7 +16,7 @@
                     </div>
                     <div class="card-body">
                         <p class="warning-text">It may take up to 24-48 hours after completing your enrolment for your account to become active in all our online systems.</p>
-                        <p>Before you log onto the Campus WIFI you need to activate your student Microsoft 365. Instructions for which can be found at the bottom of this page and at <a href="microsoft-setup.html">Microsoft Setup</a></p>
+                        <p>Before you log onto the Campus WIFI you need to activate your student Microsoft 365. Instructions for which can be found at the bottom of this page and at <a href="<?php echo site_url().'/microsoft-setup'; ?>">Microsoft Setup</a></p>
                     </div>
                 </div>
             </section>

@@ -116,9 +116,9 @@
                         </div>
                         <div class="card-body">
                             <ul>
-                                <li><a href="documents/change_password_in_microsoft_365.pdf"><i class="bi bi-file-earmark-pdf"></i>Change Your Password In Microsoft 365</a></li>
-                                <li><a href="documents/reset_password_using_email_and_phone.pdf"><i class="bi bi-file-earmark-pdf"></i>Reset Forgotten Password Using Email And Phone</a></li>
-                                <li><a href="documents/reset_password_using_microsoft_authenticator.pdf"><i class="bi bi-file-earmark-pdf"></i>Reset Forgotten Password Using Microsoft Authenticator</a></li>
+                                <li><a href="<?php echo get_template_directory_uri(); ?>/documents/change_password_in_microsoft_365.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Change Your Password In Microsoft 365</a></li>
+                                <li><a href="<?php echo get_template_directory_uri(); ?>/documents/reset_password_using_email_and_phone.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Reset Forgotten Password Using Email And Phone</a></li>
+                                <li><a href="<?php echo get_template_directory_uri(); ?>/documents/reset_password_using_microsoft_authenticator.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Reset Forgotten Password Using Microsoft Authenticator</a></li>
                                 <li><a href="https://login.microsoftonline.com/" target="_blank">Log in To Microsoft 365</a></li>
                             </ul>
                         </div>

@@ -80,7 +80,7 @@
                                 <li>Use the Downloadable Instruction Sheets, linked at the bottom of this FAQ to guide you through the setup process.</li>
                             </ul>
                             
-                            <p>Visit our <a href="password-help.html">Password Help Page</a> for everything you need to know about TAFE passwords</p>
+                            <p>Visit our <a href="<?php echo site_url().'/password-help'; ?>">Password Help Page</a> for everything you need to know about TAFE passwords</p>
                             
                             <p>If you need help with this process, please visit a campus library. If possible, download the Microsoft Authenticator prior to your visit.</p>
                             
@@ -103,8 +103,8 @@
                     </div>
                     <div class="card-body">
                         <ul>
-                            <li><a href="documents/set_up_microsoft_authenticator_with_phone_and_pc.pdf"><i class="bi bi-file-earmark-pdf"></i>Set up Microsoft Authenticator with a phone and PC</a></li>
-                            <li><a href="documents/set_up_microsoft_authenticator_with_phone_only.pdf"><i class="bi bi-file-earmark-pdf"></i>Set up Microsoft Authenticator with only a phone</a></li>
+                            <li><a href="<?php echo get_template_directory_uri(); ?>/documents/set_up_microsoft_authenticator_with_phone_and_pc.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Set up Microsoft Authenticator with a phone and PC</a></li>
+                            <li><a href="<?php echo get_template_directory_uri(); ?>/documents/set_up_microsoft_authenticator_with_phone_only.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Set up Microsoft Authenticator with only a phone</a></li>
                             <li><a href="https://support.microsoft.com/en-us/microsoft-365" target="_blank">Microsoft Support</a></li>
                         </ul>
                     </div>
