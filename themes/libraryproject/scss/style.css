@@ -239,6 +239,9 @@ h1 {
 #footer i {
   color: #ffffff;
 }
+#footer .menu-item {
+  color: #ffffff;
+}
 
 /*-------------------- Home Page --------------------*/
 .home-main {

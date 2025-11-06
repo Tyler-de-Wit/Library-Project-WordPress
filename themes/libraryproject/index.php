@@ -21,53 +21,23 @@
 
                     <!-- Logo -->
                     <div class="col-2 d-flex justify-content-start">
-                        <img src="images/logo-dark.png" alt="book logo" width="50" height="50">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/logo-dark.png" alt="book logo" width="50" height="50">
                     </div>
 
                     <!-- Nav Links -->
                     <div class="col-8 d-flex justify-content-center">
                         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.html">Home</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <button class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Getting Online
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="microsoft-setup.html">Microsoft 365 & Multi-Factor Authentication Setup</a></li>
-                                        <li><a class="dropdown-item" href="login-to-wifi.html">Login To Campus WIFI</a></li>
-                                        <li><a class="dropdown-item" href="access-blackboard.html">How To Access Blackboard</a></li>
-                                        <li><a class="dropdown-item" href="locating-timetable.html">Locating Your Timetable</a></li>
-                                        <li><a class="dropdown-item" href="password-help.html">Everything You Need To Know About Passwords</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <button class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Important Resources
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="library-printers.html">Using The Library Printers</a></li>
-                                        <li><a class="dropdown-item" href="student-portal.html">Accessing The Student Portal</a></li>
-                                        <li><a class="dropdown-item" href="online-resources.html">Online Resources</a></li>
-                                        <li><a class="dropdown-item" href="student-card.html">How Do I Get My Student Card</a></li>
-                                        <li><a class="dropdown-item" href="library-study-rooms.html">Using The Library Study Rooms</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <button class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Helpful Links
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="referencing.html">How To Reference Your Work Correctly</a></li>
-                                        <li><a class="dropdown-item" href="email-tips.html">Email Tips And Tricks</a></li>
-                                        <li><a class="dropdown-item" href="student-discount.html">Unlocking Student Discount On Your SmartRider</a></li>
-                                        <li><a class="dropdown-item" href="tafe-contacts.html">Useful Contacts At TAFE</a></li>
-                                        <li><a class="dropdown-item" href="faq.html">Frequently Asked Questions</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                            <?php
+                            wp_nav_menu(array(
+                                'theme_location' => 'main-menu',
+                                'container'      => false,
+                                'menu_class'     => '',
+                                'fallback_cb'    => '__return_false',
+                                'items_wrap'     => '<ul id="%1$s" class="navbar-nav %2$s">%3$s</ul>',
+                                'depth'          => 2,
+                                'walker'         => new bootstrap_5_wp_nav_menu_walker()
+                            ));
+                            ?>
                         </div>
                     </div>
 
@@ -119,47 +89,17 @@
 
                 <!-- Nav Links -->
                 <div class="offcanvas-body">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <button class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">
-                                Getting Online
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="microsoft-setup.html">Microsoft 365 & Authenticator</a></li>
-                                <li><a class="dropdown-item" href="login-to-wifi.html">Login To Campus WIFI</a></li>
-                                <li><a class="dropdown-item" href="access-blackboard.html">How To Access Blackboard</a></li>
-                                <li><a class="dropdown-item" href="locating-timetable.html">Locating Your Timetable</a></li>
-                                <li><a class="dropdown-item" href="password-help.html">Password Help</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <button class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">
-                                Important Resources
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="library-printers.html">Using The Library Printers</a></li>
-                                <li><a class="dropdown-item" href="student-portal.html">Accessing The Student Portal</a></li>
-                                <li><a class="dropdown-item" href="online-resources.html">Online Resources</a></li>
-                                <li><a class="dropdown-item" href="student-card.html">How Do I Get My Student Card</a></li>
-                                <li><a class="dropdown-item" href="library-study-rooms.html">Using The Library Study Rooms</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <button class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">
-                                Helpful Links
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="referencing.html">How To Reference Your Work Correctly</a></li>
-                                <li><a class="dropdown-item" href="email-tips.html">Email Tips And Tricks</a></li>
-                                <li><a class="dropdown-item" href="student-discount.html">Smart Rider Student Discount</a></li>
-                                <li><a class="dropdown-item" href="tafe-contacts.html">Useful Contacts At TAFE</a></li>
-                                <li><a class="dropdown-item" href="faq.html">Frequently Asked Questions</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'offcanvas-menu',
+                        'container'      => false,
+                        'menu_class'     => '',
+                        'fallback_cb'    => '__return_false',
+                        'items_wrap'     => '<ul id="%1$s" class="navbar-nav %2$s">%3$s</ul>',
+                        'depth'          => 2,
+                        'walker'         => new bootstrap_5_wp_nav_menu_walker()
+                    ));
+                    ?>
                 </div>
 
                 <!-- Font Size And Contrast Buttons -->

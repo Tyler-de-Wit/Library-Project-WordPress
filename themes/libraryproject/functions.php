@@ -15,8 +15,8 @@ add_action( 'wp_enqueue_scripts', 'add_theme_style' );
 // -------------------- Enqueue scripts -------------------- //	
 function add_theme_script() {
   
-    wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js', array(), '1.0', 'false');
-    wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/main.js', array(), '1.0', 'false');
+    wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js', array(), '1.0', true);
+    wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/main.js', array(), '1.0', true);
 
 }
 add_action( 'wp_enqueue_scripts', 'add_theme_script' );
@@ -39,34 +39,10 @@ function multiple_widget_init(){
 	widget_registration('Bougainvillea Treasure Image', 'gallery-widget-1-bougainvillea-treasure-image', 'Widget area for Bougainvillea Treasure plant', '<div class="widget">', '</div>', '<h2 class="widget-title">', '</h2>');
 	widget_registration('Echeveria Topsy Turvy Price', 'gallery-widget-2-echeveria-topsy-turvy-price', 'Widget area for Echeveria Topsy Turvy plant price', '', '', '<h2 class="widget-title">', '</h2>');
 }
-add_action('widgets_init', 'multiple_widget_init');
+add_action('widgets_init', 'multiple_widget_init', 10, 7);
 
 
-// -------------------- Create Footer Menu -------------------- //	
-function register_footer_menu() {
-    register_nav_menu( 'footer_menu', 'Footer Menu' );
-}
-add_action( 'init', 'register_footer_menu' );
-
-// Add class to menu anchor tags
-function wpse156165_menu_add_class( $atts, $item, $args ) {
-    $class = 'text-reset';
-    $atts['class'] = $class;
-    return $atts;
-}
-add_filter( 'nav_menu_link_attributes', 'wpse156165_menu_add_class', 10, 3 );
-
-// Add classes to menu list tags
-function add_additional_class_on_li($classes, $item, $args) {
-    if(isset($args->add_li_class)) {
-        $classes[] = $args->add_li_class;
-    }
-    return $classes;
-}
-add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
-
-
-// -------------------- Create Header Menu -------------------- //
+// -------------------- Create Menus -------------------- //
 // bootstrap 5 wp_nav_menu walker
 class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
 {
@@ -130,9 +106,9 @@ class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
         $attributes .= !empty($item->xfn) ? ' rel="' . esc_attr($item->xfn) . '"' : '';
         $attributes .= !empty($item->url) ? ' href="' . esc_attr($item->url) . '"' : '';
 
-        $active_class = ($item->current || $item->current_item_ancestor || in_array("current_page_parent", $item->classes, true) || in_array("current-post-ancestor", $item->classes, true)) ? 'active' : '';
+        $active_class = ($item->current || $item->current_item_ancestor || in_array("current_page_parent", $item->classes, true) || in_array("current-post-ancestor", $item->classes, true)) ? '' : '';
         $nav_link_class = ( $depth > 0 ) ? 'dropdown-item ' : 'nav-link ';
-        $attributes .= ( $args->walker->has_children ) ? ' class="'. $nav_link_class . $active_class . ' dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"' : ' class="'. $nav_link_class . 'fs-4 fw-bold' . '"';
+        $attributes .= ( $args->walker->has_children ) ? ' class="'. $nav_link_class . $active_class . ' dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"' : ' class="'. $nav_link_class . $active_class . '"';
 
         $item_output = $args->before;
         $item_output .= '<a' . $attributes . '>';
@@ -143,5 +119,20 @@ class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
         $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
     }
 }
-// register a new menu
-register_nav_menu('navbarNav', 'Main menu');
+
+// Register the menus
+function register_menus() {
+    register_nav_menu('main-menu', 'Main menu in the header');
+    register_nav_menu('offcanvas-menu', 'Offcanvas menu in the mobile offcanvas menu');
+    register_nav_menu('footer-navigation-menu', 'Navigation menu in the footer');
+    register_nav_menu('footer-useful-pages-menu', 'Useful pages menu in the footer');
+}
+add_action( 'init', 'register_menus' );
+
+// Add class to menu anchor tags
+function add_class_to_menu_anchor_tags($atts, $item, $args) {
+    $class = 'text-reset';
+    $atts['class'] = $class;
+    return $atts;
+}
+add_filter('nav_menu_link_attributes', 'add_class_to_menu_anchor_tags', 10, 3);
