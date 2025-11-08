@@ -10,6 +10,22 @@
     <p>This page isn't in our library</p>
     <p>We searched the archives, the returns, even under the librarian's desk with no luck. Maybe the Dewey Decimal System misplaced it.</p>
     <p>Try visiting our <a href="faq.html">Frequently Asked Questions</a> you might find your answer there.</p>
+    <p>Or ask our chatbot what you are looking for.</p>
+
+    <div class="chatbox-container text-start">
+        <h3 class="chatbox-header">Chat Box</h3>
+
+        <div class="chatbox-messages">
+
+        </div>
+
+        <form class="chatbox-input-form" id="chatbox-form">
+            <input type="text" class="chatbox-input" placeholder="What are you looking for?">
+            <button type="submit" class="button send-button">Send</button>
+        </form>
+
+        <button class="button clear-chat-button">Clear Chat</button>
+    </div>
 </main>
 
 

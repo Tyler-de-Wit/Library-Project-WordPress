@@ -81,10 +81,17 @@ function increaseContrast() {
     // Set sesion variable to keep state between pages
     sessionStorage.setItem("contrast", "high");
 
+    // Add high contrast class to all elements in page
     for (let x = 0; x < elements.length; x++) {
         for (let i = 0; i < elements[x].length; i++) {
             elements[x][i].classList.add('high-contrast');
         }
+    }
+
+    // Add contrast border class to all divs on the page
+    const divs = document.querySelectorAll('div');
+    for (let i = 0; i < divs.length; i++) {
+        divs[i].classList.add('contrast-border');
     }
 }
 
@@ -95,10 +102,17 @@ function decreaseContrast() {
     // Set sesion variable to keep state between pages
     sessionStorage.setItem("contrast", "low");
 
+    // Remove high contrast class to all elements in page
     for (let x = 0; x < elements.length; x++) {
         for (let i = 0; i < elements[x].length; i++) {
             elements[x][i].classList.remove('high-contrast');
         }
+    }
+
+    // Remove contrast border class to all divs on the page
+    const divs = document.querySelectorAll('div');
+    for (let i = 0; i < divs.length; i++) {
+        divs[i].classList.remove('contrast-border');
     }
 }
 

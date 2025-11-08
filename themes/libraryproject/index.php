@@ -131,62 +131,38 @@
     <button id="scroll-to-top-button" title="Go to top"><i class="bi bi-arrow-up"></i></button>
     <div class="container mt-5">
         <div class="row">
-
+            
             <!-- Search Form -->
             <div class="col-xl-6 col-sm-12 mb-5 search-form">
                 <h2 class="animateLeft">Search This Website</h2>
-                <form>
-                    <input type="text" placeholder="Search.." name="search">
-                    <button type="submit"><i class="bi bi-search"></i></button>
-                </form>
-            </div>
 
+                <div class="chatbox-container">
+                    <h3 class="chatbox-header">Chat Box</h3>
+
+                    <div class="chatbox-messages">
+
+                    </div>
+
+                    <form class="chatbox-input-form" id="chatbox-form">
+                        <input type="text" class="chatbox-input" placeholder="What are you looking for?">
+                        <button type="submit" class="button send-button">Send</button>
+                    </form>
+
+                    <button class="button clear-chat-button">Clear Chat</button>
+                </div>
+            </div>
+            
             <!-- FAQ Section -->
             <div class="col-xl-6 col-sm-12 mb-5">
                 <h2 class="animateRight">Frequently Asked Questions</h2>
-                <div class="accordion" id="accordionPanelsStayOpenExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                                How do I setup Microsoft 365?
-                            </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                            <div class="accordion-body">
-                                <p>Do you need to set up Microsoft 365 and the Microsoft Authenticator so you can access your TAFE account and applications.</p>
-                                <p>Then visit our <a href="microsoft-setup.html">Microsoft Setup</a> page to learn how.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                                I need help with my password?
-                            </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                <p>Are you unsure what your default password is, do you understand the requirements for a new password, do you need to change your password and has your password expired or you forgot it.</p>
-                                <p>Visit our <a href="password-help.html">Password Help</a> page to find the answers you are looking for.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                                Where do I access Blackboard?
-                            </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                <p>Are you unsure of where to find Blackboard and how to sign in to it.</p>
-                                <p>Then visit our <a href="access-blackboard.html">Accessing Blackboard</a> page to find out.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
+                <?php
+                    if (is_active_sidebar( 'widget-home-page-faq' )) {
+                        dynamic_sidebar( 'widget-home-page-faq' ); 
+                    }
+                ?>
 
-                <a href="faq.html" class="btn btn-primary mt-3">Visit More FAQ's</a>
+                <a href="<?php echo site_url().'/faq'; ?>" class="btn btn-primary mt-3">Visit More FAQ's</a>
             </div>
         </div>
     </div>

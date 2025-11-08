@@ -24,10 +24,6 @@
                     <h2 class="text-uppercase fw-bold mb-4 fs-6">
                         Navigation
                     </h2>
-                    <!-- <p><a href="<?php echo home_url(); ?>" class="text-reset">Home</a></p>
-                    <p><a href="<?php echo site_url().'/faq'; ?>" class="text-reset">FAQ</a></p>
-                    <p><a href="<?php echo site_url().'/contact'; ?>" class="text-reset">Contact</a></p>
-                    <p><a href="<?php echo site_url().'/sitemap'; ?>" class="text-reset">Sitemap</a></p> -->
 
                     <?php 
                     wp_nav_menu( array( 
@@ -44,11 +40,6 @@
                     <h2 class="text-uppercase fw-bold mb-4 fs-6">
                         Useful Pages
                     </h2>
-                    <!-- <p><a href="<?php echo site_url().'/microsoft-setup'; ?>" class="text-reset">Microsoft Setup</a></p>
-                    <p><a href="<?php echo site_url().'/login-to-wifi'; ?>" class="text-reset">Login To WIFI</a></p>
-                    <p><a href="<?php echo site_url().'/locating-timetable'; ?>" class="text-reset">Locating Timetable</a></p>
-                    <p><a href="<?php echo site_url().'/library-printers'; ?>" class="text-reset">Library Printers</a></p>
-                    <p><a href="<?php echo site_url().'/password-help'; ?>" class="text-reset">TAFE Passwords</a></p> -->
 
                     <?php 
                     wp_nav_menu( array( 
