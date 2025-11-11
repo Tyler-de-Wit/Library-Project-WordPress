@@ -8,10 +8,10 @@
     <h1 class="mb-5 text-center">Frequently Asked Questions</h1>
 
     <!-- Search Form -->
-    <div class="mb-5 search-form">
-        <h2 class="text-center">Search This Website</h2>
+    <div class="mb-5 text-center">
+        <h2>Search This Website</h2>
 
-        <?php get_template_part( 'template-parts/content', 'chatbox' ); ?>
+        <?php get_search_form(); ?>
     </div>
 
     <!-- New Students -->

@@ -1,3 +1,4 @@
+<?php //Page to display when "error404" occurs ?>
 <?php get_header(); ?>
 
 
@@ -12,7 +13,7 @@
     <p>Try visiting our <a href="faq.html">Frequently Asked Questions</a> you might find your answer there.</p>
     <p>Or ask our chatbot what you are looking for.</p>
 
-    <?php get_template_part( 'template-parts/content', 'chatbox' ); ?>
+    <?php get_search_form(); ?>
 </main>
 
 

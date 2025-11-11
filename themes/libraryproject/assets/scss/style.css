@@ -1,0 +1,487 @@
+/*-------------------- Fonts --------------------*/
+@font-face {
+  font-family: "Nunito";
+  src: url("fonts/nunito-variablefont-weight.ttf");
+}
+/*-------------------- Global Styles --------------------*/
+* {
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  color: #2f2f2f;
+}
+
+main {
+  background-color: #ffffff;
+  min-height: 95vh;
+}
+
+header {
+  height: 70px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.search-form input {
+  width: 30vw;
+}
+
+.card {
+  height: 100%;
+}
+.card .card-body {
+  height: 100%;
+}
+
+.btn-primary {
+  background-color: #ef476f;
+  color: #000000;
+  border: 1px solid #000000;
+}
+.btn-primary:hover {
+  background-color: #ffd166;
+  color: #000000;
+  border: 1px solid #000000;
+}
+.btn-primary:active {
+  transform: translateY(5px);
+}
+
+.pagination {
+  position: absolute;
+  bottom: 0px;
+}
+.pagination .page-numbers {
+  padding: 0.5rem;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  color: #000000;
+}
+.pagination .page-numbers:hover {
+  color: #0000ff;
+}
+.pagination .current:hover {
+  color: #000000;
+}
+
+.post-tag,
+.post-category {
+  padding: 0.2rem;
+  border-radius: 4px;
+}
+.post-tag a,
+.post-category a {
+  color: #000000;
+}
+.post-tag a:hover,
+.post-category a:hover {
+  color: #0000ff;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0;
+  left: 5rem;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 99;
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+}
+
+.skip-link:focus {
+  width: auto;
+  height: auto;
+  color: #ff0000;
+  transform: translateY(0%);
+}
+
+#scroll-to-top-button {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: 1px solid #000000;
+  outline: none;
+  background-color: #ffd166;
+  color: #000000;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+#scroll-to-top-button:hover {
+  background-color: #ef476f;
+}
+#scroll-to-top-button:active {
+  transform: translateY(5px);
+}
+#scroll-to-top-button::after {
+  content: " Back To Top";
+}
+
+@media screen and (max-width: 766px) {
+  #scroll-to-top-button::after {
+    content: "";
+  }
+}
+.display-none {
+  display: none;
+}
+
+.warning-text {
+  color: #ff0000;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.high-contrast {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.contrast-border {
+  border: 1px solid #000000;
+}
+
+.fadeInLeft {
+  animation: fadeInLeft 1.2s both;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.fadeInRight {
+  animation: fadeInRight 1.2s both;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.fadeInTop {
+  animation: fadeInTop 1.2s both;
+}
+
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.chatbox-container {
+  background: #e7e7e7;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  height: 37rem;
+  max-width: 40rem;
+  margin: auto;
+  /* Messages */
+  /* Message Form */
+  /* Buttons */
+}
+.chatbox-container .chatbox-header {
+  margin-bottom: 1em;
+  color: #000000;
+}
+.chatbox-container .message {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000000;
+}
+.chatbox-container .message:nth-child(even) {
+  background-color: #00c49a;
+}
+.chatbox-container .message:nth-child(odd) {
+  background-color: #ffd166;
+}
+.chatbox-container .message .message-sender {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+.chatbox-container .message .message-text {
+  margin-bottom: 0.3rem;
+  word-wrap: break-word;
+}
+.chatbox-container .message .message-timestamp {
+  font-size: 0.75rem;
+  text-align: right;
+}
+.chatbox-container .chatbox-messages {
+  height: 22em;
+  overflow-y: scroll;
+}
+.chatbox-container .chatbox-input-form {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 0.7rem;
+}
+.chatbox-container .chatbox-input-form .chatbox-input {
+  padding: 0.7rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  color: #000000;
+  flex-grow: 1;
+  border: 1px solid #000000;
+}
+.chatbox-container .chatbox-input-form .send-button {
+  background-color: #ef476f;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.chatbox-container .clear-chat-button {
+  display: block;
+  margin: 1.5rem auto;
+  font-weight: bold;
+}
+.chatbox-container .button {
+  border: none;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  border: 1px solid #000000;
+}
+.chatbox-container .button:hover {
+  opacity: 80%;
+}
+.chatbox-container .button:active {
+  transform: translateY(2px);
+}
+
+/*-------------------- Header --------------------*/
+.navbar .nav-item {
+  font-weight: 600;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2px;
+}
+.navbar .nav-item:hover {
+  margin-bottom: 0;
+  border-bottom: 2px solid #ef476f;
+}
+.navbar .nav-item a {
+  padding: 0;
+}
+.navbar .nav-item .nav-link {
+  color: #000000;
+}
+.navbar .nav-item .dropdown-toggle {
+  padding: 0;
+}
+.navbar .nav-item .dropdown-menu {
+  padding: 0.5rem;
+}
+.navbar .nav-item .dropdown-menu li {
+  margin: 0.3rem;
+  border-bottom: 2px solid #ffffff;
+}
+.navbar .nav-item .dropdown-menu li:hover {
+  border-bottom: 2px solid #ef476f;
+}
+.navbar .nav-item .dropdown-menu li a:hover {
+  background-color: #ffffff;
+}
+.navbar .font-size-contrast-buttons {
+  padding: 0;
+}
+.navbar .font-size-contrast-buttons .btn-font-size,
+.navbar .font-size-contrast-buttons .btn-contrast {
+  color: #000000;
+  padding: 0;
+  font-weight: 500;
+  border-radius: 0;
+  margin-bottom: 2px;
+  margin-left: 0.8rem;
+}
+.navbar .font-size-contrast-buttons .btn-font-size:hover,
+.navbar .font-size-contrast-buttons .btn-contrast:hover {
+  margin-bottom: 1px;
+  border-bottom: 2px solid #ef476f;
+}
+.navbar .font-size-contrast-buttons .btn-secondary {
+  padding-right: 0;
+}
+.navbar .font-size-contrast-buttons .dropdown-menu button:focus {
+  border: 2px solid #000000;
+  border-radius: 4px;
+}
+.navbar .offcanvas-buttons button {
+  border: 1px solid #000000;
+  width: 100%;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.navbar .offcanvas-buttons .btn-font-size {
+  background-color: #ef476f;
+}
+.navbar .offcanvas-buttons .btn-contrast {
+  background-color: #ffd166;
+}
+
+#separate-navbar {
+  background-color: #00c49a;
+  border-bottom: 1px solid #000000;
+  box-shadow: 0px 1px 4px 0px #000000;
+}
+#separate-navbar .font-size-contrast-buttons .dropdown-toggle {
+  display: block;
+  background-color: #00c49a;
+  color: #000000;
+  border: none;
+}
+
+/*-------------------- Footer --------------------*/
+#footer {
+  background-color: #000000;
+}
+#footer p,
+#footer h2 {
+  color: #ffffff;
+  margin-bottom: 0.3rem;
+}
+#footer #copyright-statement {
+  border-top: 1px solid #ffffff;
+}
+#footer a {
+  text-decoration: none;
+}
+#footer a:hover {
+  text-decoration: underline;
+  text-decoration-color: #ef476f;
+  text-decoration-thickness: 2px;
+}
+#footer i {
+  color: #ffffff;
+}
+#footer .menu-item {
+  color: #ffffff;
+}
+
+/*-------------------- Home Page --------------------*/
+.home-main {
+  min-height: 0;
+}
+.home-main .btn-primary {
+  background-color: #ef476f;
+  border-color: #000000;
+  color: #000000;
+}
+.home-main .btn-primary:hover {
+  opacity: 70%;
+}
+.home-main .btn-primary:active {
+  transform: translateY(5px);
+}
+
+#home-hero-image {
+  background-image: url("../images/home-hero-image.jpg");
+  height: 70vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*-------------------- Sitemap Page --------------------*/
+.sitemap-main li {
+  margin: 0.5rem;
+}
+.sitemap-main a {
+  color: #0000ff;
+  text-decoration: none;
+}
+.sitemap-main a:hover {
+  text-decoration: underline;
+  color: #ef476f;
+}
+
+/*-------------------- Contact Page --------------------*/
+.contact-main form {
+  border: 1px solid #000000;
+  border-radius: 5px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 1rem;
+  padding-top: 0;
+}
+.contact-main form label {
+  text-align: left;
+}
+.contact-main form textarea {
+  height: 13.1rem;
+}
+.contact-main form button {
+  background-color: #ef476f;
+  border: 1px solid #000000;
+  font-weight: 600;
+}
+
+/*-------------------- FAQ Page --------------------*/
+.faq-main .accordion-body p {
+  text-align: left;
+}
+
+/*-------------------- Microsoft Setup --------------------*/
+.microsoft-setup-main .video-tutorials iframe {
+  width: 100%;
+  height: 380px;
+}
+
+/*-------------------- Library Printers --------------------*/
+.library-printers-main .print-photocopy-scan,
+.library-printers-main .cant-log-in {
+  background-color: #e7e7e7;
+}
+.library-printers-main table {
+  border-collapse: collapse;
+}
+.library-printers-main table th,
+.library-printers-main table td {
+  border: 1px solid #000000;
+  padding: 0.5rem;
+}
+.library-printers-main iframe {
+  width: 100%;
+  height: 380px;
+}
+
+/*-------------------- Email Tips --------------------*/
+.email-tips-main li {
+  line-height: 2;
+}
+
+/*-------------------- Access Blackboard --------------------*/
+.access-blackboard-main iframe {
+  width: 100%;
+  height: 380px;
+}
+
+/*-------------------- Locating Timetable --------------------*/
+.locating-timetable-main iframe {
+  width: 100%;
+  height: 380px;
+}/*# sourceMappingURL=style.css.map */

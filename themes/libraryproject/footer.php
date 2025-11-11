@@ -12,7 +12,7 @@
                 <!-- Business Information -->
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 pe-xl-2 pe-xs-0 text-dark">
                     <h2 class="text-uppercase fw-bold mb-4 fs-6">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/logo-light.png" alt="book logo" width="25" height="25">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-light.png" alt="book logo" width="25" height="25">
                         NMT Library
                     </h2>
                     <p>Use this site to learn how to setup Microsoft 365, connect to the WIFI on campus, access Blackboard, find your timetable, use the library printers, view the most frequently asked questions and more.</p>
