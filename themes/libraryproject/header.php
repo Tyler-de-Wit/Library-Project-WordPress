@@ -13,7 +13,11 @@
         ?>
     </title>
 
-    <link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
+    <?php
+        $custom_logo_id = get_theme_mod('custom_logo');
+        $logo = wp_get_attachment_image_src($custom_logo_id);
+    ?>
+    <link rel="icon" type="image/x-icon" href="<?php echo $logo[0]; ?>">
 
     <?php wp_head(); ?>
 </head>
@@ -29,7 +33,7 @@
 
                 <!-- Logo -->
                 <div class="col-2 d-flex justify-content-start">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/logo-dark.png" alt="book logo" width="50" height="50">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-dark.png" alt="book logo" width="50" height="50">
                 </div>
 
                 <!-- Navigation Links -->
@@ -128,3 +132,5 @@
         </div>
     </nav>
 </header>
+
+<button id="scroll-to-top-button" title="Go to top"><i class="bi bi-arrow-up"></i></button>

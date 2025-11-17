@@ -1,32 +1,33 @@
 <?php
 
 // -------------------- Theme Support -------------------- //
-function theme_setup() {
+function mytheme_setup() {
 
-    add_theme_support( 'custom-logo' );
+    add_theme_support('custom-logo');
+    add_theme_support('post-thumbnails');
 }
-add_action( 'after_setup_theme', 'theme_setup' );
+add_action('after_setup_theme', 'mytheme_setup');
 
 
 // -------------------- Enqueue stylesheets -------------------- //
 function add_theme_style() {
   
-    wp_enqueue_style( 'normalise', get_template_directory_uri() . '/css/normalise.css', array(), '1.0', 'all');
-    wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css', array(), '1.0', 'all');
-    wp_enqueue_style( 'bootstrapicons', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css', array(), '1.0', 'all');
-    wp_enqueue_style( 'styles', get_template_directory_uri() . '/scss/style.css', array(), '1.0', 'all');
+    wp_enqueue_style('normalise', get_template_directory_uri() . '/assets/css/normalise.css', array(), '1.0', 'all');
+    wp_enqueue_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css', array(), '1.0', 'all');
+    wp_enqueue_style('bootstrapicons', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css', array(), '1.0', 'all');
+    wp_enqueue_style('styles', get_template_directory_uri() . '/assets/scss/style.css', array(), '1.0', 'all');
 }
-add_action( 'wp_enqueue_scripts', 'add_theme_style' );
+add_action('wp_enqueue_scripts', 'add_theme_style');
 
 
 // -------------------- Enqueue scripts -------------------- //
 function add_theme_script() {
   
-    wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js', array(), '1.0', true);
-    wp_enqueue_script( 'chatbox', get_template_directory_uri() . '/js/chatbox.js', array(), '1.0', true);
-    wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/main.js', array(), '1.0', true);
+    wp_enqueue_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js', array(), '1.0', true);
+    wp_enqueue_script('chatbox', get_template_directory_uri() . '/assets/js/chatbox.js', array(), '1.0', true);
+    wp_enqueue_script('scripts', get_template_directory_uri() . '/assets/js/main.js', array(), '1.0', true);
 }
-add_action( 'wp_enqueue_scripts', 'add_theme_script' );
+add_action('wp_enqueue_scripts', 'add_theme_script');
 
 
 // -------------------- Create Widgets -------------------- //
@@ -47,7 +48,7 @@ function multiple_widget_init(){
 
 	widget_registration('Home Page FAQ', 'widget-home-page-faq', 'Widget area for the FAQ on the home page', '<div class="widget">', '</div>', '<h2 class="widget-title">', '</h2>');
 }
-add_action( 'widgets_init', 'multiple_widget_init', 10, 7 );
+add_action('widgets_init', 'multiple_widget_init', 10, 7);
 
 
 // -------------------- Create Menus -------------------- //
@@ -136,7 +137,7 @@ function register_menus() {
     register_nav_menu('footer-navigation-menu', 'Navigation menu in the footer');
     register_nav_menu('footer-useful-pages-menu', 'Useful pages menu in the footer');
 }
-add_action( 'init', 'register_menus' );
+add_action('init', 'register_menus');
 
 // Add class to menu anchor tags
 function add_class_to_menu_anchor_tags($atts, $item, $args) {
@@ -145,4 +146,4 @@ function add_class_to_menu_anchor_tags($atts, $item, $args) {
     $atts['class'] = $class;
     return $atts;
 }
-add_filter( 'nav_menu_link_attributes', 'add_class_to_menu_anchor_tags', 10, 3 );
+add_filter('nav_menu_link_attributes', 'add_class_to_menu_anchor_tags', 10, 3);

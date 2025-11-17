@@ -8,10 +8,10 @@
     <h1 class="mb-5 text-center">NMT Library Sitemap</h1>
 
     <!-- Search Form -->
-    <div class="mb-5 search-form">
-        <h2 class="text-center">Search This Website</h2>
+    <div class="mb-5 text-center">
+        <h2>Search This Website</h2>
 
-        <?php get_template_part( 'template-parts/content', 'chatbox' ); ?>
+        <?php get_search_form(); ?>
     </div>
 
     <div class="row justify-content-center">
@@ -22,7 +22,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="<?php echo site_url().'/faq'; ?>">Frequently Asked Questions</a></li>
                 <li><a href="<?php echo site_url().'/contact'; ?>">Contact</a></li>
-                <li><a href="<?php echo site_url().'/sitemap'; ?>">Sitemap</a></li>
+                <li><a href="<?php echo site_url().'/blog'; ?>">Blog</a></li>
             </ul>
         </div>
 
@@ -97,18 +97,18 @@
         <div class="col-xl-4 col-sm-12 mb-5">
             <ul>
                 <li class="list-unstyled"><h2 class="animateRight">PDF Resources</h2></li>
-                <li><a href="<?php echo get_template_directory_uri(); ?>/documents/navigating_the_student_portal.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Navigating the Student Portal</a></li>
-                <li><a href="<?php echo get_template_directory_uri(); ?>/documents/printing_on_nmtafe_computers_using_ipad_and_iphone.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Print using iPad and iPhone</a></li>
-                <li><a href="<?php echo get_template_directory_uri(); ?>/documents/printing_on_nmtafe_computers_using_mac.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Print using Mac</a></li>
-                <li><a href="<?php echo get_template_directory_uri(); ?>/documents/printing_on_nmtafe_computers_using_chrome_os.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Print using Chrome OS</a></li>
-                <li><a href="<?php echo get_template_directory_uri(); ?>/documents/printing_on_nmtafe_printers_using_windows.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Print using Windows</a></li>
-                <li><a href="<?php echo get_template_directory_uri(); ?>/documents/printing_on_nmtafe_printers_using_android.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Print using Android</a></li>
-                <li><a href="<?php echo get_template_directory_uri(); ?>/documents/change_password_in_microsoft_365.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Change Password In Microsoft 365</a></li>
-                <li><a href="<?php echo get_template_directory_uri(); ?>/documents/reset_password_using_email_and_phone.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Reset Password Using Email And Phone</a></li>
-                <li><a href="<?php echo get_template_directory_uri(); ?>/documents/reset_password_using_microsoft_authenticator.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Reset Password Using Microsoft Authenticator</a></li>
-                <li><a href="<?php echo get_template_directory_uri(); ?>/documents/set_up_microsoft_authenticator_with_phone_and_pc.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Set Up Microsoft Authenticator Phone And PC</a></li>
-                <li><a href="<?php echo get_template_directory_uri(); ?>/documents/set_up_microsoft_authenticator_with_phone_only.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Set Up Microsoft Authenticator Phone Only</a></li>
-                <li><a href="<?php echo get_template_directory_uri(); ?>/documents/foi_information_statement_(G030E1).pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Information Statement (362 KB) (PDF document) (362 KB)</a></li>
+                <li><a href="<?php echo get_template_directory_uri(); ?>/assets/documents/navigating_the_student_portal.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Navigating the Student Portal</a></li>
+                <li><a href="<?php echo get_template_directory_uri(); ?>/assets/documents/printing_on_nmtafe_computers_using_ipad_and_iphone.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Print using iPad and iPhone</a></li>
+                <li><a href="<?php echo get_template_directory_uri(); ?>/assets/documents/printing_on_nmtafe_computers_using_mac.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Print using Mac</a></li>
+                <li><a href="<?php echo get_template_directory_uri(); ?>/assets/documents/printing_on_nmtafe_computers_using_chrome_os.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Print using Chrome OS</a></li>
+                <li><a href="<?php echo get_template_directory_uri(); ?>/assets/documents/printing_on_nmtafe_printers_using_windows.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Print using Windows</a></li>
+                <li><a href="<?php echo get_template_directory_uri(); ?>/assets/documents/printing_on_nmtafe_printers_using_android.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Print using Android</a></li>
+                <li><a href="<?php echo get_template_directory_uri(); ?>/assets/documents/change_password_in_microsoft_365.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Change Password In Microsoft 365</a></li>
+                <li><a href="<?php echo get_template_directory_uri(); ?>/assets/documents/reset_password_using_email_and_phone.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Reset Password Using Email And Phone</a></li>
+                <li><a href="<?php echo get_template_directory_uri(); ?>/assets/documents/reset_password_using_microsoft_authenticator.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Reset Password Using Microsoft Authenticator</a></li>
+                <li><a href="<?php echo get_template_directory_uri(); ?>/assets/documents/set_up_microsoft_authenticator_with_phone_and_pc.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Set Up Microsoft Authenticator Phone And PC</a></li>
+                <li><a href="<?php echo get_template_directory_uri(); ?>/assets/documents/set_up_microsoft_authenticator_with_phone_only.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Set Up Microsoft Authenticator Phone Only</a></li>
+                <li><a href="<?php echo get_template_directory_uri(); ?>/assets/documents/foi_information_statement_(G030E1).pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i>Information Statement (362 KB) (PDF document) (362 KB)</a></li>
             </ul>
         </div>
     </div>
