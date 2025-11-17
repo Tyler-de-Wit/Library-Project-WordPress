@@ -15,6 +15,10 @@
         }
     ?>
     <hr>
-    
-    <?php the_content(); ?>
+
+    <div class="article-post-content">
+
+        <?php the_content(); ?>
+
+    </div>
 </main>

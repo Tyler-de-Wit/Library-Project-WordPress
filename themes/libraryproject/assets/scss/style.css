@@ -78,6 +78,13 @@ h1 {
   color: #0000ff;
 }
 
+.article-post-content h2 {
+  border-bottom: 1px solid #000000;
+}
+.article-post-content h2:not(:first-child) {
+  margin-top: 4rem;
+}
+
 .skip-link {
   position: fixed;
   top: 0;

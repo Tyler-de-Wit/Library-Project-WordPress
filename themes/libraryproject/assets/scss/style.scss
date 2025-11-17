@@ -95,6 +95,16 @@ h1 {
     }
 }
 
+.article-post-content {
+    h2 {
+        border-bottom: 1px solid #000000;
+        
+        &:not(:first-child) {
+            margin-top: 4rem;
+        }
+    }
+}
+
 // Skip link
 .skip-link {
     position: fixed;
