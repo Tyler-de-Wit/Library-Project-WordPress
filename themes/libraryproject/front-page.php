@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>North Metropolitan Tafe Library</title>
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/logo-dark.png" type="image/x-icon">
+=======
+    <title>Home</title>
+    <link rel="shortcut icon" href="assets/images/logo-dark.png" type="image/x-icon">
+>>>>>>> aa3cf31defa294ea62392a64748b81f1435aa6e8
 
     <?php wp_head(); ?>
 </head>
