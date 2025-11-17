@@ -47,6 +47,9 @@ function widget_registration($name, $id, $description, $beforeWidget, $afterWidg
 function multiple_widget_init(){
 
 	widget_registration('Home Page FAQ', 'widget-home-page-faq', 'Widget area for the FAQ on the home page', '<div class="widget">', '</div>', '<h2 class="widget-title">', '</h2>');
+	widget_registration('FAQ Page New Students', 'widget-faq-page-new-students', 'Widget area for the new students FAQ on the FAQ page', '<div class="widget">', '</div>', '<h2 class="widget-title">', '</h2>');
+	widget_registration('FAQ Page Library Help', 'widget-faq-page-library-help', 'Widget area for the library help FAQ on the FAQ page', '<div class="widget">', '</div>', '<h2 class="widget-title">', '</h2>');
+    widget_registration('FAQ Page Other Questions', 'widget-faq-page-other-questions', 'Widget area for the other questions FAQ on the FAQ page', '<div class="widget">', '</div>', '<h2 class="widget-title">', '</h2>');
 }
 add_action('widgets_init', 'multiple_widget_init', 10, 7);
 
